@@ -1,0 +1,13 @@
+{
+    "onset_recall": 0.0,
+    "false_warning_rate": 1.0,
+    "precision": 0.09411764705882353,
+    "recall": 1.0,
+    "f1": 0.17204301075268819,
+    "pr_auc": 0.12121212121212122,
+    "attack_onsets_actual": 0,
+    "attack_onsets_warned": 0,
+    "persistence_precision": 0.8,
+    "persistence_recall": 1.0,
+    "persistence_f1": 0.8888888888888888
+}

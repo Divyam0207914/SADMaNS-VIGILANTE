@@ -1,0 +1,202 @@
+{
+    "load_time_sec": 0.8461220264434814,
+    "inference_time_ms": 44.9678897857666,
+    "explanation_time_ms": 0.27489662170410156,
+    "validation_status": "PASS",
+    "sample_explanation": {
+        "summary": "The model forecasts an attack onset. The feature showing strongest deviation is 'rst_rate'.",
+        "risk_probability": 0.4909169375896454,
+        "predicted_attack_type": "Benign",
+        "warning_level": "WARNING_ONSET",
+        "top_changed_features": [
+            {
+                "feature": "rst_rate",
+                "current_value": 0.2028123289346695,
+                "forecasted_value": 0.07946098698174646,
+                "signed_change": -0.12335134195292304,
+                "absolute_change": 0.12335134195292304,
+                "relative_change": -0.608204356218686,
+                "signed_scaled_change": -2.6911354064941406,
+                "absolute_scaled_change": 2.6911354064941406,
+                "rank": 1
+            },
+            {
+                "feature": "mean_flow_duration",
+                "current_value": 8507735.0,
+                "forecasted_value": 13355004.683897171,
+                "signed_change": 4847269.683897171,
+                "absolute_change": 4847269.683897171,
+                "relative_change": 0.5697485504540482,
+                "signed_scaled_change": 1.7838267087936401,
+                "absolute_scaled_change": 1.7838267087936401,
+                "rank": 2
+            },
+            {
+                "feature": "psh_rate",
+                "current_value": 0.447809636592865,
+                "forecasted_value": 0.37147368018172394,
+                "signed_change": -0.07633595641114105,
+                "absolute_change": 0.07633595641114105,
+                "relative_change": -0.17046519362990706,
+                "signed_scaled_change": -1.156935214996338,
+                "absolute_scaled_change": 1.156935214996338,
+                "rank": 3
+            }
+        ],
+        "all_feature_changes": [
+            {
+                "feature": "rst_rate",
+                "current_value": 0.2028123289346695,
+                "forecasted_value": 0.07946098698174646,
+                "signed_change": -0.12335134195292304,
+                "absolute_change": 0.12335134195292304,
+                "relative_change": -0.608204356218686,
+                "signed_scaled_change": -2.6911354064941406,
+                "absolute_scaled_change": 2.6911354064941406,
+                "rank": 1
+            },
+            {
+                "feature": "mean_flow_duration",
+                "current_value": 8507735.0,
+                "forecasted_value": 13355004.683897171,
+                "signed_change": 4847269.683897171,
+                "absolute_change": 4847269.683897171,
+                "relative_change": 0.5697485504540482,
+                "signed_scaled_change": 1.7838267087936401,
+                "absolute_scaled_change": 1.7838267087936401,
+                "rank": 2
+            },
+            {
+                "feature": "psh_rate",
+                "current_value": 0.447809636592865,
+                "forecasted_value": 0.37147368018172394,
+                "signed_change": -0.07633595641114105,
+                "absolute_change": 0.07633595641114105,
+                "relative_change": -0.17046519362990706,
+                "signed_scaled_change": -1.156935214996338,
+                "absolute_scaled_change": 1.156935214996338,
+                "rank": 3
+            },
+            {
+                "feature": "protocol_ratio_tcp",
+                "current_value": 0.758788526058197,
+                "forecasted_value": 0.6662286960072002,
+                "signed_change": -0.09255983005099677,
+                "absolute_change": 0.09255983005099677,
+                "relative_change": -0.1219836975287864,
+                "signed_scaled_change": -0.9692645072937012,
+                "absolute_scaled_change": 0.9692645072937012,
+                "rank": 4
+            },
+            {
+                "feature": "syn_rate",
+                "current_value": 0.06814493983983994,
+                "forecasted_value": 0.04929539963281325,
+                "signed_change": -0.018849540207026685,
+                "absolute_change": 0.018849540207026685,
+                "relative_change": -0.2766095362521192,
+                "signed_scaled_change": -0.860321044921875,
+                "absolute_scaled_change": 0.860321044921875,
+                "rank": 5
+            },
+            {
+                "feature": "mean_flow_iat",
+                "current_value": 2253090.0,
+                "forecasted_value": 3133436.8299572407,
+                "signed_change": 880346.8299572407,
+                "absolute_change": 880346.8299572407,
+                "relative_change": 0.3907286570697312,
+                "signed_scaled_change": 0.8138976693153381,
+                "absolute_scaled_change": 0.8138976693153381,
+                "rank": 6
+            },
+            {
+                "feature": "total_bytes",
+                "current_value": 2376161.0,
+                "forecasted_value": 8788139.225469278,
+                "signed_change": 6411978.225469278,
+                "absolute_change": 6411978.225469278,
+                "relative_change": 2.698461184014584,
+                "signed_scaled_change": 0.7587136030197144,
+                "absolute_scaled_change": 0.7587136030197144,
+                "rank": 7
+            },
+            {
+                "feature": "total_bwd_packets",
+                "current_value": 7197.0,
+                "forecasted_value": 10527.046569327778,
+                "signed_change": 3330.0465693277783,
+                "absolute_change": 3330.0465693277783,
+                "relative_change": 0.46269925932024153,
+                "signed_scaled_change": 0.431042343378067,
+                "absolute_scaled_change": 0.431042343378067,
+                "rank": 8
+            },
+            {
+                "feature": "flow_count",
+                "current_value": 1849.0,
+                "forecasted_value": 1660.368074811573,
+                "signed_change": -188.63192518842698,
+                "absolute_change": 188.63192518842698,
+                "relative_change": -0.10201834785745104,
+                "signed_scaled_change": -0.1943337321281433,
+                "absolute_scaled_change": 0.1943337321281433,
+                "rank": 9
+            },
+            {
+                "feature": "mean_pkt_len",
+                "current_value": 76.32996368408203,
+                "forecasted_value": 78.64236151972611,
+                "signed_change": 2.3123978356440773,
+                "absolute_change": 2.3123978356440773,
+                "relative_change": 0.030294758755745464,
+                "signed_scaled_change": 0.17394056916236877,
+                "absolute_scaled_change": 0.17394056916236877,
+                "rank": 10
+            },
+            {
+                "feature": "port_entropy",
+                "current_value": 2.4229235649108887,
+                "forecasted_value": 2.4827033687862854,
+                "signed_change": 0.05977980387539672,
+                "absolute_change": 0.05977980387539672,
+                "relative_change": 0.024672591715700833,
+                "signed_scaled_change": 0.1613910049200058,
+                "absolute_scaled_change": 0.1613910049200058,
+                "rank": 11
+            },
+            {
+                "feature": "unique_dst_ports",
+                "current_value": 218.0,
+                "forecasted_value": 207.61622944830657,
+                "signed_change": -10.38377055169343,
+                "absolute_change": 10.38377055169343,
+                "relative_change": -0.04763197500776803,
+                "signed_scaled_change": -0.133225217461586,
+                "absolute_scaled_change": 0.133225217461586,
+                "rank": 12
+            },
+            {
+                "feature": "total_fwd_packets",
+                "current_value": 8308.0,
+                "forecasted_value": 8184.675877983271,
+                "signed_change": -123.32412201672923,
+                "absolute_change": 123.32412201672923,
+                "relative_change": -0.014844020464218732,
+                "signed_scaled_change": -0.023500312119722366,
+                "absolute_scaled_change": 0.023500312119722366,
+                "rank": 13
+            }
+        ],
+        "current_attack": false,
+        "attack_onset": true,
+        "early_warning": true,
+        "stage": "IMPACT",
+        "mitre": {
+            "tactic": "TA0040 (Impact)",
+            "technique": "T1499 (Endpoint Denial of Service)",
+            "note": "Semantic mapping based on heuristic DoS identification. Not a learned attribution."
+        },
+        "generation_time_sec": 0.00027489662170410156
+    }
+}

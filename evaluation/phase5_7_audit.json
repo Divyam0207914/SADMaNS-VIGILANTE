@@ -1,0 +1,103 @@
+{
+    "artifacts": {
+        "data/global_states.parquet": {
+            "exists": true,
+            "size_bytes": 74625
+        },
+        "data/node_states.parquet": {
+            "exists": true,
+            "size_bytes": 3105885
+        },
+        "data/graphs.pt": {
+            "exists": true,
+            "size_bytes": 30693033
+        },
+        "data/graph_embeddings.parquet": {
+            "exists": true,
+            "size_bytes": 171296
+        },
+        "data/temporal_sequences.pt": {
+            "exists": true,
+            "size_bytes": 958589
+        },
+        "data/window_index.parquet": {
+            "exists": true,
+            "size_bytes": 22446
+        },
+        "checkpoints/best_world_model.pt": {
+            "exists": true,
+            "size_bytes": 428281
+        },
+        "checkpoints/state_scaler.pkl": {
+            "exists": true,
+            "size_bytes": 720
+        },
+        "evaluation/results.json": {
+            "exists": true,
+            "size_bytes": 1418
+        },
+        "evaluation/training_history.json": {
+            "exists": true,
+            "size_bytes": 8045
+        }
+    },
+    "data_audit": {
+        "window_index_count": 572,
+        "global_states_count": 572,
+        "node_states_count": 131526,
+        "global_states_cols": 15,
+        "node_states_cols": 19
+    },
+    "graph_audit": {
+        "total_graphs": 572,
+        "max_nodes": 50,
+        "feature_dim": 17,
+        "actual_self_loop_count": 572,
+        "graphs_with_self_loops": 572,
+        "total_self_loop_edges": 28114,
+        "edge_validation": {
+            "valid_dims": true,
+            "source_ge_0": true,
+            "dest_ge_0": true,
+            "idx_lt_nodes": true,
+            "weights_finite": true,
+            "weights_in_range": true,
+            "no_nan_inf": true,
+            "is_undirected": true
+        },
+        "gcn_training_status": "UNTRAINED"
+    },
+    "sequence_audit": {
+        "total_sequences": 562,
+        "input_shape": [
+            562,
+            5,
+            77
+        ],
+        "target_shape": [
+            562,
+            13
+        ]
+    },
+    "checkpoint_audit": {
+        "has_model_state": true,
+        "has_config": true,
+        "has_threshold": true,
+        "has_scaler_path": true
+    },
+    "inference_audit": {
+        "success": true,
+        "keys_returned": [
+            "next_state",
+            "risk_probability",
+            "is_attack",
+            "attack_type_id",
+            "attack_type_str",
+            "inferred_stage",
+            "mitre_enrichment"
+        ],
+        "next_state_shape": [
+            13
+        ]
+    }
+}

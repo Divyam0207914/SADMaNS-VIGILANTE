@@ -1,0 +1,135 @@
+{
+    "phase": 10,
+    "status": "PASS",
+    "load_time_sec": 0.6086969375610352,
+    "avg_inference_time_ms": 2.2654028499827668,
+    "avg_explanation_time_ms": 0.11568349950453814,
+    "total_test_sequences": 85,
+    "valid_outputs": 85,
+    "warning_distribution": {
+        "NORMAL": 0,
+        "WARNING_ONSET": 75,
+        "WARNING_CONTINUING": 10,
+        "WATCH_RECOVERY": 0,
+        "UNKNOWN": 0
+    },
+    "leakage_audit_pass": true,
+    "synthetic_tests_pass": true,
+    "sample_outputs": [
+        {
+            "timestamp": "2018-02-15 11:34:00",
+            "current_window_id": 485,
+            "current_attack": true,
+            "risk_probability": 0.4909169375896454,
+            "predicted_attack_type": "Benign",
+            "warning_level": "WARNING_CONTINUING",
+            "is_attack_forecast": false,
+            "is_early_warning": false,
+            "stage": "IMPACT",
+            "mitre": {
+                "tactic": "TA0040 (Impact)",
+                "technique": "T1499 (Endpoint Denial of Service)",
+                "note": "Semantic mapping based on heuristic DoS identification. Not a learned attribution."
+            },
+            "top_changed_features": [
+                "mean_flow_duration",
+                "flow_count",
+                "unique_dst_ports"
+            ],
+            "explanation_summary": "The model forecasts an ongoing attack. The feature showing strongest deviation is 'mean_flow_duration'.",
+            "valid": true
+        },
+        {
+            "timestamp": "2018-02-15 11:35:00",
+            "current_window_id": 486,
+            "current_attack": true,
+            "risk_probability": 0.4909169375896454,
+            "predicted_attack_type": "Benign",
+            "warning_level": "WARNING_CONTINUING",
+            "is_attack_forecast": false,
+            "is_early_warning": false,
+            "stage": "IMPACT",
+            "mitre": {
+                "tactic": "TA0040 (Impact)",
+                "technique": "T1499 (Endpoint Denial of Service)",
+                "note": "Semantic mapping based on heuristic DoS identification. Not a learned attribution."
+            },
+            "top_changed_features": [
+                "mean_flow_duration",
+                "syn_rate",
+                "unique_dst_ports"
+            ],
+            "explanation_summary": "The model forecasts an ongoing attack. The feature showing strongest deviation is 'mean_flow_duration'.",
+            "valid": true
+        },
+        {
+            "timestamp": "2018-02-15 11:36:00",
+            "current_window_id": 487,
+            "current_attack": true,
+            "risk_probability": 0.4909169375896454,
+            "predicted_attack_type": "Benign",
+            "warning_level": "WARNING_CONTINUING",
+            "is_attack_forecast": false,
+            "is_early_warning": false,
+            "stage": "IMPACT",
+            "mitre": {
+                "tactic": "TA0040 (Impact)",
+                "technique": "T1499 (Endpoint Denial of Service)",
+                "note": "Semantic mapping based on heuristic DoS identification. Not a learned attribution."
+            },
+            "top_changed_features": [
+                "syn_rate",
+                "mean_flow_duration",
+                "mean_flow_iat"
+            ],
+            "explanation_summary": "The model forecasts an ongoing attack. The feature showing strongest deviation is 'syn_rate'.",
+            "valid": true
+        },
+        {
+            "timestamp": "2018-02-15 11:37:00",
+            "current_window_id": 488,
+            "current_attack": true,
+            "risk_probability": 0.4909169375896454,
+            "predicted_attack_type": "Benign",
+            "warning_level": "WARNING_CONTINUING",
+            "is_attack_forecast": false,
+            "is_early_warning": false,
+            "stage": "IMPACT",
+            "mitre": {
+                "tactic": "TA0040 (Impact)",
+                "technique": "T1499 (Endpoint Denial of Service)",
+                "note": "Semantic mapping based on heuristic DoS identification. Not a learned attribution."
+            },
+            "top_changed_features": [
+                "mean_flow_duration",
+                "total_bytes",
+                "total_bwd_packets"
+            ],
+            "explanation_summary": "The model forecasts an ongoing attack. The feature showing strongest deviation is 'mean_flow_duration'.",
+            "valid": true
+        },
+        {
+            "timestamp": "2018-02-15 11:38:00",
+            "current_window_id": 489,
+            "current_attack": true,
+            "risk_probability": 0.4909169375896454,
+            "predicted_attack_type": "Benign",
+            "warning_level": "WARNING_CONTINUING",
+            "is_attack_forecast": false,
+            "is_early_warning": false,
+            "stage": "IMPACT",
+            "mitre": {
+                "tactic": "TA0040 (Impact)",
+                "technique": "T1499 (Endpoint Denial of Service)",
+                "note": "Semantic mapping based on heuristic DoS identification. Not a learned attribution."
+            },
+            "top_changed_features": [
+                "mean_flow_duration",
+                "syn_rate",
+                "mean_flow_iat"
+            ],
+            "explanation_summary": "The model forecasts an ongoing attack. The feature showing strongest deviation is 'mean_flow_duration'.",
+            "valid": true
+        }
+    ]
+}

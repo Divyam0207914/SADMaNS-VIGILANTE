@@ -1,0 +1,222 @@
+[
+    {
+        "epoch": 1,
+        "train_total_loss": 4.131040471200724,
+        "train_state_loss": 1.0424116018770913,
+        "train_risk_loss": 2.2668182079421957,
+        "train_type_loss": 0.8218107102178132,
+        "val_total_loss": 18.722317218780518,
+        "val_state_loss": 1.6310144265492756,
+        "val_risk_loss": 15.411020307313828,
+        "val_type_loss": 1.6802820989063807
+    },
+    {
+        "epoch": 2,
+        "train_total_loss": 2.7674317335657794,
+        "train_state_loss": 1.0035933389615164,
+        "train_risk_loss": 1.3569136527355088,
+        "train_type_loss": 0.4069246998573381,
+        "val_total_loss": 12.948324566795712,
+        "val_state_loss": 1.5687025842212496,
+        "val_risk_loss": 9.685177695183526,
+        "val_type_loss": 1.6944440319424583
+    },
+    {
+        "epoch": 3,
+        "train_total_loss": 2.793617942557687,
+        "train_state_loss": 1.0007031132246702,
+        "train_risk_loss": 1.358518858295664,
+        "train_type_loss": 0.43439600849879606,
+        "val_total_loss": 11.41234574999128,
+        "val_state_loss": 1.6093682334536599,
+        "val_risk_loss": 7.947496732076009,
+        "val_type_loss": 1.8554806510607402
+    },
+    {
+        "epoch": 4,
+        "train_total_loss": 2.8121829142097297,
+        "train_state_loss": 1.0085425807622856,
+        "train_risk_loss": 1.3428768426104054,
+        "train_type_loss": 0.46076348325375077,
+        "val_total_loss": 11.079664480118524,
+        "val_state_loss": 1.6360389050983248,
+        "val_risk_loss": 7.3115145819527765,
+        "val_type_loss": 2.1321114003658295
+    },
+    {
+        "epoch": 5,
+        "train_total_loss": 2.905600773469182,
+        "train_state_loss": 1.0154351804395971,
+        "train_risk_loss": 1.4504153825551196,
+        "train_type_loss": 0.4397501854496148,
+        "val_total_loss": 11.78417139961606,
+        "val_state_loss": 1.643697114217849,
+        "val_risk_loss": 7.856852667672293,
+        "val_type_loss": 2.283621370792389
+    },
+    {
+        "epoch": 6,
+        "train_total_loss": 2.8982924723443184,
+        "train_state_loss": 1.0079275527376559,
+        "train_risk_loss": 1.390969290988136,
+        "train_type_loss": 0.49939562801186366,
+        "val_total_loss": 11.922768729073661,
+        "val_state_loss": 1.564872389747983,
+        "val_risk_loss": 7.687358118238903,
+        "val_type_loss": 2.670538624127706
+    },
+    {
+        "epoch": 7,
+        "train_total_loss": 2.91563938106896,
+        "train_state_loss": 1.020606048537878,
+        "train_risk_loss": 1.4284393077588264,
+        "train_type_loss": 0.4665940478254517,
+        "val_total_loss": 11.554088092985607,
+        "val_state_loss": 1.5843391986120314,
+        "val_risk_loss": 7.542525972638812,
+        "val_type_loss": 2.4272226577713374
+    },
+    {
+        "epoch": 8,
+        "train_total_loss": 3.0756578639566747,
+        "train_state_loss": 1.0229132139045773,
+        "train_risk_loss": 1.5912147617825418,
+        "train_type_loss": 0.46152985672307684,
+        "val_total_loss": 12.874202773684548,
+        "val_state_loss": 1.6072826499030703,
+        "val_risk_loss": 8.833929533050174,
+        "val_type_loss": 2.4329900471937087
+    },
+    {
+        "epoch": 9,
+        "train_total_loss": 2.912051484785007,
+        "train_state_loss": 1.025042724821707,
+        "train_risk_loss": 1.4193545995474468,
+        "train_type_loss": 0.46765413508767084,
+        "val_total_loss": 11.74941939399356,
+        "val_state_loss": 1.6257360549200148,
+        "val_risk_loss": 7.771682398659842,
+        "val_type_loss": 2.3520009177071706
+    },
+    {
+        "epoch": 10,
+        "train_total_loss": 3.0948930696676706,
+        "train_state_loss": 1.0198165666662706,
+        "train_risk_loss": 1.5912735832253182,
+        "train_type_loss": 0.4838029003628641,
+        "val_total_loss": 12.97665686834426,
+        "val_state_loss": 1.6224313236418224,
+        "val_risk_loss": 8.891052495865594,
+        "val_type_loss": 2.4631728813761757
+    },
+    {
+        "epoch": 11,
+        "train_total_loss": 2.8826157603858387,
+        "train_state_loss": 1.025937096763203,
+        "train_risk_loss": 1.4276663941584773,
+        "train_type_loss": 0.42901227947409826,
+        "val_total_loss": 11.687042690458751,
+        "val_state_loss": 1.5810986246381487,
+        "val_risk_loss": 7.517860026586623,
+        "val_type_loss": 2.5880840789704096
+    },
+    {
+        "epoch": 12,
+        "train_total_loss": 2.82196431851569,
+        "train_state_loss": 1.0086889520249598,
+        "train_risk_loss": 1.3584908735357775,
+        "train_type_loss": 0.45478451979979306,
+        "val_total_loss": 11.427092279706683,
+        "val_state_loss": 1.5646977424621582,
+        "val_risk_loss": 6.906536193121047,
+        "val_type_loss": 2.955858213560922
+    },
+    {
+        "epoch": 13,
+        "train_total_loss": 2.7652584226380172,
+        "train_state_loss": 1.0038420797607674,
+        "train_risk_loss": 1.337899675199397,
+        "train_type_loss": 0.4235167030159754,
+        "val_total_loss": 10.978767599378314,
+        "val_state_loss": 1.5626178809574671,
+        "val_risk_loss": 6.5393972510383245,
+        "val_type_loss": 2.87675210407802
+    },
+    {
+        "epoch": 14,
+        "train_total_loss": 2.7578741005662137,
+        "train_state_loss": 1.0029249847996933,
+        "train_risk_loss": 1.328774680921443,
+        "train_type_loss": 0.426174443490026,
+        "val_total_loss": 10.790342875889369,
+        "val_state_loss": 1.5590956892286028,
+        "val_risk_loss": 6.335526863733928,
+        "val_type_loss": 2.8957202917053584
+    },
+    {
+        "epoch": 15,
+        "train_total_loss": 2.7564770890252888,
+        "train_state_loss": 1.0019725774990693,
+        "train_risk_loss": 1.3308696886358673,
+        "train_type_loss": 0.4236348385119256,
+        "val_total_loss": 10.82768776303246,
+        "val_state_loss": 1.5548087188175745,
+        "val_risk_loss": 6.31416620526995,
+        "val_type_loss": 2.9587127679870244
+    },
+    {
+        "epoch": 16,
+        "train_total_loss": 2.755110763714817,
+        "train_state_loss": 1.001749258004982,
+        "train_risk_loss": 1.3302948857081756,
+        "train_type_loss": 0.4230665663119794,
+        "val_total_loss": 10.81385680607387,
+        "val_state_loss": 1.5528334890093123,
+        "val_risk_loss": 6.286658990950811,
+        "val_type_loss": 2.974364439646403
+    },
+    {
+        "epoch": 17,
+        "train_total_loss": 2.7537731117267947,
+        "train_state_loss": 1.0012829258241727,
+        "train_risk_loss": 1.330125732882939,
+        "train_type_loss": 0.4223644721295694,
+        "val_total_loss": 10.80431742895217,
+        "val_state_loss": 1.5511619590577626,
+        "val_risk_loss": 6.260608196258545,
+        "val_type_loss": 2.9925476227487837
+    },
+    {
+        "epoch": 18,
+        "train_total_loss": 2.744100226094098,
+        "train_state_loss": 1.0004513806665822,
+        "train_risk_loss": 1.3270830653095973,
+        "train_type_loss": 0.4165657331015318,
+        "val_total_loss": 10.756032398768834,
+        "val_state_loss": 1.5459680557250977,
+        "val_risk_loss": 6.2436349505469915,
+        "val_type_loss": 2.966429511706034
+    },
+    {
+        "epoch": 19,
+        "train_total_loss": 2.7494729675409446,
+        "train_state_loss": 1.000550539590627,
+        "train_risk_loss": 1.331289637786438,
+        "train_type_loss": 0.417632748455795,
+        "val_total_loss": 10.805769102913994,
+        "val_state_loss": 1.5460293974195207,
+        "val_risk_loss": 6.252590769813175,
+        "val_type_loss": 3.0071489214897156
+    },
+    {
+        "epoch": 20,
+        "train_total_loss": 2.7514428194545912,
+        "train_state_loss": 0.9993056183249592,
+        "train_risk_loss": 1.3298259861293336,
+        "train_type_loss": 0.42231124806343445,
+        "val_total_loss": 10.859364146278018,
+        "val_state_loss": 1.5327132429395403,
+        "val_risk_loss": 6.2176317146846225,
+        "val_type_loss": 3.109019080797831
+    }
+]

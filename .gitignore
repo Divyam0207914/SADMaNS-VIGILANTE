@@ -1,0 +1,36 @@
+# Virtual environment
+.venv/
+
+# Python bytecode
+__pycache__/
+*.pyc
+*.pyo
+
+# macOS
+.DS_Store
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Environment variables
+.env
+
+# Dataset (large file — do not commit to Git)
+data/*.csv
+
+# Model checkpoints (generated during training)
+checkpoints/*.pt
+checkpoints/*.pkl
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Distribution / packaging
+*.egg-info/
+dist/
+build/
+data/02-15-2018_cleaned.parquet
+data/02-15-2018.csv

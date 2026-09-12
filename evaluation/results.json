@@ -1,0 +1,63 @@
+{
+    "dataset": {
+        "total_sequences": 562
+    },
+    "split": {
+        "train": 393,
+        "validation": 84,
+        "test": 85
+    },
+    "forecasting": {
+        "rmse_scaled": 1.1305064966824108,
+        "mae_scaled": 0.8227114081382751,
+        "rmse_original": 2670039.3047713735,
+        "mae_original": 814089.4375
+    },
+    "forecasting_baseline": {
+        "rmse_original": 3333408.469237456,
+        "mae_original": 926511.125
+    },
+    "attack_risk": {
+        "pr_auc": 0.12121212121212122,
+        "roc_auc": 0.43506493506493504,
+        "precision": 0.09411764705882353,
+        "recall": 1.0,
+        "f1_score": 0.17204301075268819,
+        "confusion_matrix": [
+            [
+                0,
+                77
+            ],
+            [
+                0,
+                8
+            ]
+        ]
+    },
+    "attack_risk_baseline": {
+        "precision": 0.8888888888888888,
+        "recall": 1.0,
+        "f1_score": 0.9411764705882353
+    },
+    "attack_type": {
+        "macro_f1": 0.47530864197530864,
+        "weighted_f1": 0.8611474219317357,
+        "confusion_matrix": [
+            [
+                77,
+                0
+            ],
+            [
+                8,
+                0
+            ]
+        ]
+    },
+    "attack_type_baseline": {
+        "macro_f1": 0.47530864197530864
+    },
+    "support": {
+        "test_total": 85,
+        "test_attacks": 8
+    }
+}
