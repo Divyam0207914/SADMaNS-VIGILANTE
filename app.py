@@ -91,22 +91,18 @@ def get_stage_description(stage):
         return "Impact refers to behaviour associated with disrupting or degrading the availability of systems or services."
     return "Normal network operation without disruption."
 
-@st.cache_resource
-def load_models_and_data():
+import json
+
+@st.cache_data
+def load_dashboard_cache():
     t0 = time.time()
-    model_path = os.path.join(CHECKPOINT_DIR, "best_world_model.pt")
-    scaler_path = os.path.join(CHECKPOINT_DIR, "state_scaler.pkl")
-    seq_path = os.path.join(PROJECT_ROOT, "data/temporal_sequences.pt")
-    idx_path = os.path.join(PROJECT_ROOT, "data/window_index.parquet")
-    
-    engine = EarlyWarningEngine(checkpoint_path=model_path, scaler_path=scaler_path)
-    explainer = ExplanationEngine(scaler=engine.scaler)
-    
-    seqs = torch.load(seq_path, weights_only=False, map_location='cpu')
-    idx_df = pd.read_parquet(idx_path).set_index('window_id')
-    
+    cache_path = os.path.join(PROJECT_ROOT, "data/dashboard_cache.json")
+    if not os.path.exists(cache_path):
+        return None, 0.0
+    with open(cache_path, 'r') as f:
+        cache = json.load(f)
     load_time = time.time() - t0
-    return engine, explainer, seqs, idx_df, load_time
+    return cache, load_time
 
 def run_dashboard():
     # ------------------------------------------------
@@ -118,12 +114,14 @@ def run_dashboard():
     
     st.info("**DEMO MODE** | Historical CIC-IDS2018 traffic replay | Forecast horizon: 1 minute\n\n*Note: Offline dataset demonstration — Not live network traffic.*")
     
-    with st.spinner("Loading models and dataset..."):
-        engine, explainer, seqs, idx_df, load_time = load_models_and_data()
+    with st.spinner("Loading dashboard cache..."):
+        cache_data, load_time = load_dashboard_cache()
         
-    inputs = seqs['inputs']
-    metadata = seqs['metadata']
-    total_seqs = len(inputs)
+    if cache_data is None:
+        st.error("Dashboard cache not found. Run:\npython precompute_dashboard.py")
+        return
+        
+    total_seqs = cache_data['total_sequences']
     
     # ------------------------------------------------
     # SIDEBAR
@@ -131,46 +129,20 @@ def run_dashboard():
     st.sidebar.title("Explore Historical Network Window")
     seq_idx = st.sidebar.slider("", 0, total_seqs - 1, 0)
     
-    meta = metadata[seq_idx]
-    t_timestamp = meta['input_end']
+    result = cache_data["sequences"][str(seq_idx)]
+    t_timestamp = result["timestamp"]
     
     st.sidebar.write(f"**Current window:** {t_timestamp}")
     st.sidebar.write("**Forecast horizon:** 1 minute")
     
     # ------------------------------------------------
-    # INFERENCE
+    # INFERENCE (CACHED)
     # ------------------------------------------------
-    seq_tensor = inputs[seq_idx]
+    is_currently_attack = result["is_currently_attack"]
+    inf_time = result.get("inf_time", 0.0)
+    exp_time = result.get("exp_time", 0.0)
     
-    t_row = idx_df[idx_df['window_end'] == t_timestamp]
-    if len(t_row) == 0:
-        is_currently_attack = False
-        t_w_id = -1
-    else:
-        is_currently_attack = bool(t_row.iloc[0]['contains_attack'])
-        t_w_id = t_row.index[0]
-        
-    current_state_unscaled = seq_tensor[-1, 64:].numpy()
-    current_state_scaled = torch.tensor(engine.scaler.transform(current_state_unscaled.reshape(1, -1)), dtype=torch.float32)
-    
-    t_inf = time.time()
-    warning_data = engine.evaluate_sequence(
-        sequence_tensor=seq_tensor,
-        current_state_tensor=current_state_scaled,
-        is_currently_attack=is_currently_attack,
-        current_window_id=t_w_id
-    )
-    inf_time = time.time() - t_inf
-    
-    pred_state_scaled = np.array(warning_data['predicted_state_delta']) + current_state_scaled.numpy().flatten()
-    
-    t_exp = time.time()
-    explanation = explainer.generate_explanation(
-        current_state_unscaled=current_state_unscaled,
-        pred_state_scaled=pred_state_scaled,
-        warning_data=warning_data
-    )
-    exp_time = time.time() - t_exp
+    explanation = result
 
     risk_pct = explanation.get("risk_probability", 0.0) * 100
     raw_w_level = explanation.get("warning_level", "NORMAL")
@@ -335,30 +307,10 @@ def run_dashboard():
     start_history = seq_idx - max_history + 1
     
     for i in range(start_history, seq_idx + 1):
-        hist_seq = inputs[i]
-        hist_meta = metadata[i]
-        hist_t_end = hist_meta['input_end']
-        
-        hist_t_row = idx_df[idx_df['window_end'] == hist_t_end]
-        is_attk = False
-        hist_w_id = -1
-        if len(hist_t_row) > 0:
-            is_attk = bool(hist_t_row.iloc[0]['contains_attack'])
-            hist_w_id = hist_t_row.index[0]
-            
-        hist_state_unscaled = hist_seq[-1, 64:].numpy()
-        hist_state_scaled = torch.tensor(engine.scaler.transform(hist_state_unscaled.reshape(1, -1)), dtype=torch.float32)
-        
-        hist_warn = engine.evaluate_sequence(
-            sequence_tensor=hist_seq,
-            current_state_tensor=hist_state_scaled,
-            is_currently_attack=is_attk,
-            current_window_id=hist_w_id
-        )
-        
-        recent_risks.append(hist_warn.get('risk_probability', 0.0) * 100)
-        recent_times.append(str(hist_t_end))
-        actual_attacks.append(is_attk)
+        hist_res = cache_data["sequences"][str(i)]
+        recent_risks.append(hist_res.get('risk_probability', 0.0) * 100)
+        recent_times.append(hist_res['timestamp'])
+        actual_attacks.append(hist_res['is_currently_attack'])
         
     timeline_df = pd.DataFrame({
         "Time": recent_times,
