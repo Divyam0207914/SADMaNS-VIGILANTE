@@ -19,8 +19,7 @@ __pycache__/
 data/*.csv
 
 # Model checkpoints (generated during training)
-checkpoints/*.pt
-checkpoints/*.pkl
+
 
 # IDE
 .idea/
